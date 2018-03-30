@@ -41,10 +41,10 @@ out_width  = ceil(float(in_width - filter_width + 1) / float(strides[2]))
 
     Input Shape: `[-1, 28, 28, 1]`  
     Filter Shape: `[5, 5]`  
-    Number of filters: `32`  
+    Number of Filters: `32`  
     Strides Shape: `[1, 1]`  
     Output Shape (Same Padding): `[-1, 28, 28, 32]`  
-    Activation Function: ReLU
+    Activation Function: `ReLU`
 
 3. Pooling Layer 1
 
@@ -52,3 +52,38 @@ out_width  = ceil(float(in_width - filter_width + 1) / float(strides[2]))
     Filter Shape: `[2, 2]`  
     Strides Shape: `[2, 2]`  
     Output Shape (Valid Padding): `[-1, 14, 14, 32]`
+
+4. Convolution Layer 2
+
+    Input Shape: `[-1, 14, 14, 32]`  
+    Filter Shape: `[5, 5]`  
+    Number of Filters: `64`  
+    Strides Shape: `[1, 1]`  
+    Output Shape (Same Padding): `[-1, 14, 14, 64]`  
+    Activation Function: `ReLU`
+
+5. Pooling Layer 2
+
+    Input Shape: `[-1, 14, 14, 64]`  
+    Filter Shape: `[2, 2]`  
+    Strides Shape: `[2, 2]`  
+    Output Shape (Valid Padding): `[-1, 7, 7, 64]`
+
+6. Dense Layer 1
+
+    Input Shape: `[-1, 7 * 7 * 64]`
+    Number of Neurons: `1024`
+    Output Shape: `[-1, 1024]`
+    Activation Function: `ReLU`  
+
+7. Dropout Layer 1
+
+    Input Shape: `[-1, 1024]`  
+    Dropout Rate: `0.4`  
+    Output Shape: `[-1, 1024]`   
+
+8. Dense Layer 2 (Logits)
+
+    Input Shape: `[-1, 1024]`
+    Number of Neurons: `10`
+    Output Shape: `[-1, 10]`  
