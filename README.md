@@ -40,14 +40,10 @@ out_width  = ceil(float(in_width - filter_width + 1) / float(strides[2]))
 2. Convolution Layer 1
 
     Input Shape: `[-1, 28, 28, 1]`  
-    Filter Shape: `[5, 5]`
-
-    Number of filters: `32`
-
-    Strides Shape: `[1, 1]`
-
+    Filter Shape: `[5, 5]`  
+    Number of filters: `32`  
+    Strides Shape: `[1, 1]`  
     Output Shape (Same Padding): `[-1, 28, 28, 32]`
-
     Activation Function: ReLU
 
 3. Pooling Layer 1
