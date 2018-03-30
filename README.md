@@ -39,8 +39,7 @@ out_width  = ceil(float(in_width - filter_width + 1) / float(strides[2]))
 
 2. Convolution Layer 1
 
-    Input Shape: `[-1, 28, 28, 1]`
-
+    Input Shape: `[-1, 28, 28, 1]`  
     Filter Shape: `[5, 5]`
 
     Number of filters: `32`
