@@ -43,15 +43,12 @@ out_width  = ceil(float(in_width - filter_width + 1) / float(strides[2]))
     Filter Shape: `[5, 5]`  
     Number of filters: `32`  
     Strides Shape: `[1, 1]`  
-    Output Shape (Same Padding): `[-1, 28, 28, 32]`
+    Output Shape (Same Padding): `[-1, 28, 28, 32]`  
     Activation Function: ReLU
 
 3. Pooling Layer 1
 
-    Input Shape: `[-1, 28, 28, 32]`
-
-    Filter Shape: `[2, 2]`
-
-    Strides Shape: `[2, 2]`
-
+    Input Shape: `[-1, 28, 28, 32]`  
+    Filter Shape: `[2, 2]`  
+    Strides Shape: `[2, 2]`  
     Output Shape (Valid Padding): `[-1, 14, 14, 32]`
