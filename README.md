@@ -71,9 +71,9 @@ out_width  = ceil(float(in_width - filter_width + 1) / float(strides[2]))
 
 6. Dense Layer 1
 
-    Input Shape: `[-1, 7 * 7 * 64]`
-    Number of Neurons: `1024`
-    Output Shape: `[-1, 1024]`
+    Input Shape: `[-1, 7 * 7 * 64]`  
+    Number of Neurons: `1024`  
+    Output Shape: `[-1, 1024]`  
     Activation Function: `ReLU`  
 
 7. Dropout Layer 1
